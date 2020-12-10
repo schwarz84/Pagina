@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta para los dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximun-scale=1">
+    <title>Super Diseño</title>
+    <!-- Importante para responsive Disaign -->
+    <!-- Siempre ponerlo debajo del titulo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximun-scale=1">
+    <!-- // RECORDAR: meta para las palababras clave de busqueda -->
+    <meta name="keywords" content="Desarrollo Web, programador, trabajo">
+    <!-- // RECORDAR: meta para la descripcion de la Pagina -->
+    <meta name="description" content="Diseño web profesional excelente">
+    <!-- // RECORDAR: meta para el nombre del Dueño de la Pagina -->
+    <meta name="owner" content="Carlos chwarz">
+    <!-- // RECORDAR: meta para el autori de la pagina -->
+    <meta name="author" content="Carlos Schwarz carlosschwarzfischer@gmail.com">
+    <!-- // RECORDAR: Meta para que lo comincen a indexar ya. -->
+    <meta name="robots" content="index, follow" />
+    
+    
+    <!-- ---------------------------------- -->
+    
+    <script src="js/modernizr-custom.js"></script>
+    
+    <!-- <script>
+        if(document.body.clientWidth > 767) {
+            document.getElementById("cardMenu").style.display = block;
+        }
+    </script> -->
+    
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="css/iconmoon.css">
+    <link rel="stylesheet" href="css/aldo.css">
+    <link rel="stylesheet" href="css/aller.css">
+    
+    <link rel="stylesheet" href="css/stylePage.css">
+    
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <figure>
+                    <img src="icons/LogoWhite.png" alt="">
+                </figure>
+            </a>
+            
+            <a href="index.html">
+                Diseño Artistico
+            </a>
+        </h1>
+        
+        <nav id="ioMenu">
+            <figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()">
+                <img src="icons/MenuW.png" alt="">
+            </figure>
+            
+            <div id="cardMenu">
+                <figure id="hideMenu" class="ioMenuMovil" onClick="displayMenu()">
+                    <img src="icons/exit.png" alt="">
+                </figure>
+ 
+                <figure id="logoMenu">
+                    <img src="icons/LogoBlack.png" alt="">
+                </figure>
+ 
+                
+                <ul>
+                    <li><a onClick="slideMenu('home')" id="m0" href="#">Home</a></li>
+                    <li><a onClick="slideMenu('aboutme')" id="m1" href="#">Sobre Mi</a></li>
+                    <li><a onClick="slideMenu('skill')" id="m2" href="#">Skills</a></li>
+                    <li><a onClick="slideMenu('portfolio')" id="m3" href="#">Portfolio</a></li>
+                    <li><a onClick="slideMenu('blog')" id="m4" href="#">Blog</a></li>
+                    <li><a href="#" onclick="displayContactFrom('block')">Contacto</a></li>
+                </ul>
+            </div>
+            
+        </nav>        
+        
+        <div id="prev-section" onClick="slidePage('prev')">
+            <img src="icons/arroww.png" alt="">
+        </div>
+        
+        <div id="next-section" onClick="slidePage('next')">
+            <img src="icons/arroww.png" alt="">
+        </div> 
+        
+    </header>
+    
+    <div id="slider">
+        <section class="slide" id="home">
+            <div class="mainAnimation">
+                
+                    <canvas id="space"></canvas>
+                
+            </div>
+            
+            <div class="mainLogo">
+                
+                <h2>
+                    Soy un <strong>DESARROLLADOR WEB</strong>
+                </h2>
+                
+                <figure>
+                    <img id="warp" src="icons/LogoWhite.png" alt="">
+                </figure>
+                
+            </div>
+            
+            <div class="buttonHome">
+                <div class="contratame" onclick="displayContactFrom('block')">
+                    CONTRATAME
+                </div>
+                
+                <a href="docs/CV.pdf" target="_blank">DESCARGA CV</a>
+                
+            </div>
+        </section>
+        
+        
+        
+        
+        <section class="slide" id="aboutme"></section>
+        <section class="slide" id="skill"></section>
+        <section class="slide" id="portfolio"></section>
+        <section class="slide" id="blog"></section>
+    </div>
+    
+    <div id="contactForm">
+        <form action="contact.php" method="post" id="formContacto" name="formContacto">
+            <figure id="logoMensaje">
+                <img src="icons/emailWithe.png" alt="">
+            </figure>
+            <div id="closeForm" onclick="displayContactFrom('none')"></div>
+            <p>Deja tu Mensaje</p>
+            
+            <input type="text" id="name" name="name" placeholder="Tu Nombre"/>
+            
+            <input type="text" id="email" name="email" placeholder="Tu Correo">
+            
+            <textarea name="message" id="message" placeholder="Mensjaje"></textarea>
+            
+            <input type="submit" name="submit" id="contactButton" value="ENVIAR">
+        </form>
+    </div>
+    
+    <div id="contactFloatingButton" onclick="displayContactFrom('block')"></div>
+    
+    <footer>
+        <div id="rrss">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        
+        <p>© 2020 All Rights reserved Privacity Policy</p>
+        
+    </footer>
+    
+    <script src="js/warpSpeed.js"></script>
+    <script>     
+        // Variables Globales
+        var sliders = new Array(5);
+            sliders[0] = "home";
+            sliders[1] = "aboutme";
+            sliders[2] = "skill";
+            sliders[3] = "portfolio";
+            sliders[4] = "blog";
+            
+        var search;
+        var show;      
+        
+        // Seleccionar los colores
+        function getColors(i) {
+            if(sliders[i] == "home") {
+                bk_body = "#233058";
+                bk_menu = "#233058";
+            } else {
+                bk_body = "#f1f1f1";
+                bk_menu = "#29abe2";
+            }
+            search.style.background = bk_body;
+            var menu = document.getElementsByTagName("header")[0];
+            menu.style.background = bk_menu;
+        }
+        
+        // Evento para recorrer el Menu
+        function slideMenu(mov) {
+             for ( i = 0; i < sliders.length; i++) {
+                search = document.getElementById(sliders[i]);
+                
+                var menuHeader = document.getElementById('m'+ i.toString());
+                
+                search.style.display = 'none';
+                menuHeader.style.borderBottom = 'none';
+             
+                if (mov == sliders[i]) {
+                    search.style.display = 'block';
+                    menuHeader.style.borderBottom = '2px solid #f1f1f1';
+                    getColors(i);
+                } 
+             
+             }
+        }
+        
+        // Evento para que reconozca el primer click
+        size();
+        function size() {
+            var screen = document.body.clientWidth
+            
+            // alert(screen);           
+            
+            if (screen >=767) {
+                cardMenu.style.display = "block";
+            } else {
+               cardMenu.style.display = "none";
+            }
+            document.getElementById('home').style.display = 'block';
+        }
+        
+        // Evento para que reconozca si cambiamos el tamaño de la pantalla
+        window.addEventListener('resize', function(){
+           size();
+        });
+        
+        // Evento para que se despliegue el menu
+        function displayMenu() {
+            
+            var display;
+            var cardMenu = document.getElementById("cardMenu");
+                
+                // var screen = document.body.clientWidth;
+                        
+                
+            display = cardMenu.style.display;
+                
+                // alert(display);
+                
+            if (display == "none"){
+                cardMenu.style.display = "block";
+            } else {
+               cardMenu.style.display = "none";
+            }
+        }
+        
+        // Evento on CLick para moverse por las paginas
+        
+        function slidePage(mov) {
+            
+            
+            for ( i = 0; i < sliders.length; i++) {
+                search = document.getElementById(sliders[i]);
+                show   = search.style.display;
+                
+                if (show == "block") {
+                    
+                    search.style.display = "none";
+                    if (mov == 'next') {
+                        i++;
+                        if(i > 4) i = 0;
+                    } else {
+                        i--;
+                        if( i < 0 ) i = 4
+                    }
+                    search = document.getElementById(sliders[i]);
+                     search.style.display = 'block';
+                     
+                    break;                       
+                } 
+                
+                 
+                
+            }
+            getColors(i);
+        }
+        
+        function displayContactFrom(disp) {
+            search = document.getElementById('contactForm');
+            search.style.display = disp;
+            size();
+        }
+    </script>
+</body>
+</html>

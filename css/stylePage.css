@@ -1,0 +1,587 @@
+body{
+    font-size: 16;
+    font-family: 'aldo', sans-serif;
+    /* background: red; */
+    position: relative;
+}
+
+header h1 {
+    display: none;
+}
+
+/* Movil First */
+
+/* Clase  icono Menu*/
+header nav .ioMenuMovil{
+    margin: 0px 0px;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+}
+
+header nav .ioMenuMovil img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Menu que se Despliega */
+header nav #cardMenu {
+    position: relative;
+    width: 230px;
+    z-index: 999;
+    top: -40px;
+    background: #f1f1f1;
+    display: none;
+}
+
+header nav #cardMenu:hover {
+    display: block;
+}
+
+header nav div #hideMenu {
+    height: 40px;
+    width: 120px;  
+    overflow: hidden;
+    margin: 0px 0px  
+}
+
+
+header nav div #hideMenu img {
+    height: 150%;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+header nav #cardMenu #logoMenu {
+    width: 80%;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+
+header nav #cardMenu #logoMenu img {
+    width: 100%;
+}
+
+header nav #cardMenu ul {
+    margin-left: 23px;
+    margin-bottom: 50px;
+    padding-bottom: 70px;
+}
+
+header nav #cardMenu ul li {
+    list-style: none;
+    font-size: 1.5em;
+    line-height: 37px;
+    margin-left: -40px;
+}
+
+header nav #cardMenu ul li a {
+    text-decoration: none;
+    font-family: 'aller', sans-serif;
+    color: black;            
+}
+
+
+/* Cabecera */
+header {
+    height: 40px;
+    width: 100%;
+    background: #233058;
+    position: absolute;
+}
+
+
+/* Botones de direccione de paginas */
+header #prev-section,
+#next-section {
+    width: 33px;
+    height: 33px;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+    margin: 5px;
+    top: 0px;
+    transition-duration: 500ms;
+}
+
+header #next-section {
+    right: 5px;
+}
+
+header #prev-section {
+    right: 40px;
+}
+
+header #prev-section img,
+#next-section img {
+    width: 30px;
+    height: 27px;
+    overflow: hidden;
+}
+
+header #prev-section img{
+    transform:rotate(180deg);
+}
+
+/* Slider de la pagina */
+#slider {
+    top: 40px;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: #233058;
+}
+
+#slider .slide {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+/* Home */
+#slider #home {
+    background: rgba(0, 10, 20, 1);
+    text-align: center;
+    font-family: 'aller';
+    position: absolute;
+    padding-bottom: 50px;  
+}
+
+#slider #home .mainAnimation {
+    /* url(https://i.imgur.com/r838U7u.jpg); */
+    background: rgba(0, 10, 20, 1) url(https://i.imgur.com/r838U7u.jpg) center no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    /* min-height: 450px; */
+    position: absolute;
+}
+
+#slider #home .mainAnimation #space {
+    width: 100%;
+    height: 100%;
+}
+
+#slider #home .mainLogo {
+    background: none;
+    position: relative;
+    width: 60vw;
+    margin-left: 20vw;
+    min-height: 430px;
+}
+
+#slider #home .mainLogo h2 {
+    color: white;
+    font-weight: lighter;
+    font-size: 1.4em;
+    padding-top: 80px;
+}
+#slider #home .mainLogo strong {
+    font-family: 'aldo';
+    font-size: 2em;
+    display: block;
+}
+
+#slider #home .mainLogo figure,
+#slider #home .mainLogo figure img {
+    width: 100%;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#slider #home .buttonHome > * {
+    background: red;
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    padding: 15px 80px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    /* position: fixed; */
+} 
+
+#slider #home .buttonHome .contratame {
+    background: orange;
+    cursor: pointer;
+}
+
+#slider #home .buttonHome a {
+    text-decoration: none;
+    background: #29abe2;
+}
+
+
+#slider #aboutme {
+    background: blue;
+    height: 400px;
+    display: none;
+}
+
+#slider #skill {
+    background: yellow;
+    height: 300px;
+    display: none;
+}
+
+#slider #portfolio {
+    background: green;
+    height: 200px;
+    display: none;
+}
+
+#slider #blog {
+    background: purple;
+    height: 100px;
+    display: none;
+} 
+
+/* Formulario de COntacto */
+#contactForm {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 40px;
+    right: 0px;
+    width: 250px;
+    font-family: 'aller';
+    z-index: 1000;
+}
+
+#contactForm figure {
+    height: 190px;
+    width: 100%;
+    background: #29abe2;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#contactForm figure img {
+    height: 100%;
+    width: 100%;
+}
+
+#contactForm #closeForm {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left:85%;  
+    top: 0px;
+}
+
+#contactForm #closeForm:hover {
+    cursor: pointer;
+}
+
+#contactForm #closeForm:before {
+    font-family: 'icomoon';
+    content: "\eae9";
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+#contactForm p {
+    margin: -24px 0px 20px 10px;
+    width: 90%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    display: block;
+    margin: 30px;
+    border: hidden;
+    border-bottom: 2px solid grey;
+    width: 80%;    
+}
+
+#contactForm #contactButton{
+    background: orange;
+    color: white;
+    height: 30px;
+    border-bottom: none;
+    border-radius: 5px;
+    margin-bottom: 60px;
+}
+
+#contactFloatingButton {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    position: fixed;
+    color: white;
+    top: 70vh;
+    right: 50px;
+    border-radius: 50%;
+}
+
+#contactFloatingButton:hover {
+    cursor: pointer;
+}
+
+#contactFloatingButton:before {
+    font-family: 'icomoon';
+    content: "\ea97";
+    position: relative;
+    font-size: 1.5em;
+    top: 12px;
+    left: 12px;
+}
+
+/* footer */
+
+footer {
+    /* margin: 0px;/*
+    padding: 0px; */
+    width: 100%;
+    height: 130px;
+    background: black;
+    position: fixed;
+    /* bottom: 0px; */
+    bottom: -110px;
+    text-align: center;
+    color: white;
+    transition-duration: 500ms;
+}
+
+/* Animacion del footer */
+footer:hover {
+    bottom: 0px;
+}
+
+footer:after {
+    font-family: 'icomoon';
+    content: "\e9b6";
+    background: white;
+    color: black;
+    position: absolute;
+    top: -30px;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    margin-left: -40px;
+    border-radius: 50%;
+    font-size: 4.5em;
+    transition-duration: 500ms;
+    
+}
+
+footer:hover:after {
+    transform: rotate(180deg);
+    background: black;
+    color: white;
+}
+
+/* Armado del footer */
+footer #rrss {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 40px;
+}
+
+footer #rrss a {
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    font-family: 'icomoon'; 
+    position: relative;    
+}
+
+footer #rrss a:before {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    position: absolute;
+}
+
+footer #rrss a:nth-child(1):before {
+    content: "\ea96";
+    position: relative;
+}
+footer #rrss a:nth-child(2):before {
+    content: "\ea91";
+    position: relative;
+}
+footer #rrss a:nth-child(3):before {
+    content: "\ea92";
+    position: relative;
+}
+footer #rrss a:nth-child(4):before {
+    content: "\eab0";
+    position: relative;
+}
+footer #rrss a:nth-child(5):before {
+    content: "\eae8";
+    position: relative;
+}
+
+footer p {
+    margin: 0px;
+    bottom: -70px;
+    position: relative;
+}
+
+
+
+
+@media screen and (min-width: 480px ) {
+    
+    /* Slider Home */
+   #slider #home .mainLogo {
+       width: 270px;
+       left: 50%;
+       margin-left: -135px;
+   }
+   
+   #slider #home .buttonHome > * {
+       min-width: 150px;
+   } 
+   
+}
+
+@media screen and (min-width: 600px ) {
+    
+}
+
+@media screen and (min-width: 767px ) {
+    
+    
+    /* Cabecera */
+    header {
+        height: 50px;
+    }
+    
+    header h1 {
+        display: inline-block;
+        width: 20%;
+        width: 100px;
+        height: 50px;
+        margin: 0px;
+        margin-left: 80px;
+        line-height: 50px;
+        min-width: 200px;
+    }
+    
+    header h1 > * {
+        display: inline-block;
+        font-size: 0.8em;
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    header h1 figure {
+        height: 40px;
+        width: 40px;
+        margin:0px;
+    }
+    
+    header h1 figure img {
+        width: 100%;
+    }
+    
+    /* Menu en la cabecera  */
+    header nav {
+        display: inline-block;
+        vertical-align: middle;
+        width: 65%;
+        position: relative;
+        margin-left: -21px;
+    }
+    
+    header nav .ioMenuMovil {
+        display: none;
+    }
+    
+    header nav #cardMenu {
+        display: inline-block;
+        position: relative;
+        background: none;
+        top: 0px;
+        width: 100%;
+        text-align: right;
+        padding-bottom: 0px;
+        margin-right: 0px;
+    }
+    
+    header nav #cardMenu figure {
+        display: none;
+    }   
+    
+    header nav #cardMenu ul {
+        margin: 0px; 
+        padding: 0px;
+        margin-top: -10px;
+        margin-left: -2px;
+    }
+    
+    header nav #cardMenu ul li{
+        display: inline-block;
+        font-size: 1.2em;
+        text-align: center;
+        width: 80px;
+        margin: -2px;
+    }
+    
+    
+    header nav #cardMenu ul li a{
+        color: white;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }    
+    
+    header nav #cardMenu ul li #m0 {
+        border-bottom: 2px solid white;
+        /* padding-bottom: 5px; */
+    }
+    
+    /* Botones Flotantes de direccion de navegacion */
+    header #prev-section,
+    #next-section { 
+        height: 50px;
+        width: 50px;        
+        background: #29abe2;
+        border-radius: 50%;
+        z-index: 999;
+        overflow: hidden;
+        
+    }
+    
+    header #prev-section {
+        top: 130px;
+        right: 45px;
+    }
+    
+    header #next-section {
+        top: 200px;
+        right: 45px;
+    }
+    
+    header #prev-section img, 
+    #next-section img {
+        margin: auto;
+        display: block;
+        margin-top: 11px;
+    }
+    
+    /* Slider de la pagina */
+    #slider {
+        top: 50px;
+    }
+    /* Formulario de Contacto */
+    #contactForm {
+        top: 50px;
+    }
+}
+
+@media screen and (min-width: 950px ) {
+    
+}
